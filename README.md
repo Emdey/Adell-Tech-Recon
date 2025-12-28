@@ -1,2 +1,9 @@
-# Adell-Tech-Recon
- An automation ecosystem for ethical hackers and bug bounty hunters that compresses days of manual reconnaissance into minutes. Instead of hunters spending their time running 15 separate command-line tools and manually digging through thousands of lines of code.
+# ADELL TECH Recon
+
+## Installation
+1. Clone this repo
+2. Create a virtual environment and install requirements:
+   python -m venv venv
+   pip install -r requirements.txt
+3. Run the Streamlit UI:
+   streamlit run ui/app.py
