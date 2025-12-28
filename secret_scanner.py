@@ -1,6 +1,7 @@
 import re
 from config import SECRET_PATTERNS
 
+
 def find_secrets(js_code: str) -> list[dict]:
     """
     Scan JS code for potential secrets.

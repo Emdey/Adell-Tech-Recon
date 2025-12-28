@@ -1,13 +1,24 @@
 import os
-import streamlit as st
 
-# Supabase credentials: Cloud secrets first, fallback to local env
-SUPABASE_URL = st.secrets.get("SUPABASE_URL") or os.getenv("SUPABASE_URL")
-SUPABASE_KEY = st.secrets.get("SUPABASE_KEY") or os.getenv("SUPABASE_KEY")
-
-# HTTP headers and timeout
+# ---------------------------
+# General Recon Settings
+# ---------------------------
 HEADERS = {"User-Agent": "ADELL-TECH-Recon/1.0"}
 TIMEOUT = 10
-# Report directory
-REPORT_DIR = "reports"
+
+REPORT_DIR = "previous_reports"
 os.makedirs(REPORT_DIR, exist_ok=True)
+
+# ---------------------------
+# Secret patterns
+# ---------------------------
+SECRET_PATTERNS = {
+    "AWS Access Key": r"AKIA[0-9A-Z]{16}",
+    "Generic API Key": r"(?i)(api_key|apikey|secret|token)\s*[:=]\s*['\"][0-9a-zA-Z_-]{16,}['\"]",
+}
+
+# ---------------------------
+# Supabase config (do NOT import streamlit here!)
+# ---------------------------
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
