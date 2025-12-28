@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+import os
 
 
 # Recon engine
@@ -10,6 +11,12 @@ from recon_engine.diff_manager import load_previous_report, save_report, get_del
 
 # Auth (Supabase ONLY)
 from auth.supabase_auth import sign_up, sign_in, user_logged_in
+
+# Load local .env only if running locally
+if "STREAMLIT_SERVER" not in os.environ:
+    from dotenv import load_dotenv
+    load_dotenv()
+
 
 # ---------------------------
 # Page configuration
