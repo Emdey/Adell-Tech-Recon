@@ -18,7 +18,18 @@ SECRET_PATTERNS = {
 }
 
 # ---------------------------
-# Supabase config (do NOT import streamlit here!)
+# Endpoint pattern
+# ---------------------------
+ENDPOINT_PATTERN = r"""
+(?:"|')(
+  \/[a-zA-Z0-9_\-\/\.]+
+  (?:\?[a-zA-Z0-9_\-=&]+)? |
+  https?:\/\/[a-zA-Z0-9\.\-\/\?_=&]+
+)(?:"|')
+"""
+
+# ---------------------------
+# Supabase config
 # ---------------------------
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
