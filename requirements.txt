@@ -1,32 +1,23 @@
-streamlit
-requests
-beautifulsoup4
-jsbeautifier
-regex
-tldextract
-pyyaml
-flask
-flask_cors
-gunicorn
-pytest
-pytest-mock
-python-dotenv
-pylint
-pre-commit
-black
-isort
-mypy
-bandit
-safety
-datadog
-loguru
-rich
-httpx
-aiohttp
-async-timeout
-aiodns
-cchardet
-yarl
-attrs
-frozenlist
-supabase
+# Streamlit & UI
+streamlit>=1.27.0,<2.0.0
+rich>=13.3.0,<15.0.0
+markdown-it-py>=2.2.0,<5.0.0
+mdurl>=0.1.0,<0.2.0
+pyyaml>=6.0
+
+# HTTP requests & parsing
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+jsbeautifier>=1.14.0
+regex>=2025.5.1
+tldextract>=3.4.5
+
+# Supabase
+supabase>=1.0.1
+
+# Stripe payments
+stripe>=6.0.0
+
+# Optional utilities
+python-dotenv>=1.0.0
+loguru>=0.7.0

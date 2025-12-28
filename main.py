@@ -1,8 +1,6 @@
 import streamlit as st
 import json
-from dotenv import load_dotenv
 
-load_dotenv()
 
 # Recon engine
 from recon_engine.js_scanner import discover_js_files, fetch_js_source, beautify_js_source
